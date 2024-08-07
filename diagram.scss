@@ -1,0 +1,27 @@
+Users
+-----
+id (PK)
+username
+email
+password
+image_url
+header_image_url
+bio
+location
+
+Messages
+--------
+id (PK)
+text
+timestamp
+user_id (FK -> Users.id)
+
+Follows
+-------
+user_following_id (PK, FK -> Users.id)
+user_being_followed_id (PK, FK -> Users.id)
+
+Likes
+-----
+user_id (PK, FK -> Users.id)
+message_id (PK, FK -> Messages.id)
